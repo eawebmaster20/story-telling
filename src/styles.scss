@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@font-face{
+  font-family: 'adventurer';
+  src: url('./assets/Fonts/JungleAdventurer.woff')
+}
+
+@font-face{
+  font-family: 'billionaire';
+  src: url('./assets/Fonts/BillionaireMediumGrunge.woff')
+}
