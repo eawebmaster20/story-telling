@@ -1,0 +1,50 @@
+<div class="storycontainer max-width-wrapper">
+  <div class="storycard" [style.background-image]="'url(' + sceneImage + ')'">
+    <!-- story image goes here -->
+    <figure>
+      <img [src]="sceneImage" alt="story image" />
+    </figure>
+    <!-- story goes here-->
+    <div class="storycontent">
+      <!-- header content -->
+      <div class="headerwrapper">
+        <div (click)="playSound()" class="volume">
+          <img [src]="volumeIcon" alt="volume" />
+        </div>
+        <div class="choicecount">
+          <p>choices made</p>
+          <div id="choicesmade">{{ choicesCount }}</div>
+        </div>
+        <div class="pagecount">PAGE {{ pageCount }}</div>
+      </div>
+      <!-- footer content -->
+      <div class="footerwrapper">
+        <div class="nextwrapper" #nextbtn>
+          <button id="next">Next</button>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <div class="storydisplay">
+          <!-- story test goes here -->
+          <div id="storytext">
+            <div id="storyTitle">{{ sceneTitle }}</div>
+            <p #storyText></p>
+          </div>
+          <div class="choiceswrapper" #choicesbtn>
+            <button
+              (click)="navigateScene(sceneId, firstChoice)"
+              class="choicesbtn"
+            >
+              {{ choiceA }}
+            </button>
+            <button
+              (click)="navigateScene(sceneId, SecondChoice)"
+              class="choicesbtn"
+            >
+              {{ choiceB }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

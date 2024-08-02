@@ -1,0 +1,68 @@
+@import '../styles';
+
+.trail {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: hwb(13 45% 15% / 0.8);
+  box-shadow: 0 0 10px rgba(218,136,114, 0.8),
+   0 0 20px rgba(218,136,114, 0.8),
+   0 0 30px rgba(218,136,114, 0.8);
+  pointer-events: none;
+  animation: fadeOut 1s linear forwards;
+}
+
+
+header {
+  overflow: visible;
+  width: 100%;
+  position: fixed;
+  margin-top: 2rem;
+  top:0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+
+  h4 {
+
+    animation: bounce 1.3s infinite, downshift 1s ease-in-out;
+    color: #fff;
+    font-family: "billionaire";
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.0362rem;
+  }
+}
+
+
+@media (max-width: 767px){
+  header{
+    font-size: 1rem;
+    padding-inline: 1.5rem;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+  header{
+    font-size: 1.25rem;
+    padding-inline: 1rem;
+  }
+}
+
+
+@media (min-width: 1024px){
+  header{
+    font-size: 1.5rem;
+    padding-inline: 4rem;
+  }
+}
+
+// 4k screen specific styles
+@media only screen and (min-width: 2560px){
+  header{
+    font-size: 2rem;
+    margin-left: 20%;
+  }
+}
