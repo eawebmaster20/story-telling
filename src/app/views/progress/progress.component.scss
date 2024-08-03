@@ -1,0 +1,43 @@
+.wrapper-container{
+    width: 150px;
+    height: 101px;
+    background-color:#00000080;
+    display: flex;
+    flex-direction: column;
+    // margin: 2rem;
+    text-align: center;
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .choices-txt{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25.1px;
+    }
+
+    .counter{
+        font-family: "adventurer";
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 46.32px;
+    }
+}
+
+// .wrapper-container::after{
+//     content:"Choices made";
+//     color: white;
+//     width: 101px;
+//     height: 50px;
+//     padding:0
+// }
+.wrapper-container::before{
+    content: "";
+    width: 150px;
+    height: 8px;
+    background-color: black;
+    padding:0;
+    position: absolute;
+    top: 0;
+}

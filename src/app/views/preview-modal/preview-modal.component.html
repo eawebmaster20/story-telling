@@ -1,0 +1,15 @@
+<div class="preview-modal">
+    <!-- close icon  -->
+    <button class="close-icon" (click)="closePreviewModalHandler()">
+      <img src="assets/image/close-icon.svg" alt="close" />
+    </button>
+
+    <!-- video preview -->
+    <div class="preview-modal-content">
+      <video controls autoplay>
+        <source [src]="storyData.selectedStoryMeta.introVideo" type="video/mp4" />
+        <!-- <source [src]="storyData.selectedStoryMeta.coverImage" type="video/ogg" /> -->
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>

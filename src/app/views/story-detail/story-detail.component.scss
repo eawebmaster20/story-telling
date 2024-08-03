@@ -1,0 +1,129 @@
+main {
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.555);
+  height: 100vh;
+
+  .story-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    .story-cover-image {
+      width: 100%;
+      height: 100%;
+      max-height: 50vh;
+      overflow: hidden;
+      border-radius: 10px;
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        background-color: rgb(0, 0, 0);
+        height: 100%;
+      }
+    }
+
+    .story-content {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      gap: 1.5rem;
+
+      h1 {
+        font-family: "adventurer";
+        font-size: 2.25rem;
+        color: #ffffff;
+      }
+
+      .story-stats {
+        display: flex;
+        gap: 4rem;
+        h3 {
+          font-family: "adventurer";
+          font-weight: 400;
+          margin-top: 0.5rem;
+          font-size: 2rem;
+          color: #ffffff;
+        }
+      }
+
+      .story-ctas {
+        display: flex;
+        gap: 1.5rem;
+        width: 100%;
+
+        button {
+          font-family: "adventurer";
+          font-weight: 400;
+          font-size: 1.125rem;
+          color: #ffffff;
+          background: transparent;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding-block: 0.8rem;
+        }
+
+        .btn-secondary {
+          border: 1px solid #ffffff;
+          width: 100%;
+        }
+        .btn-primary {
+          border: 1px solid #ffffff;
+          background: white;
+          color: black;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// mobile screens with short height
+@media (max-width: 480px) and (max-height: 700px) {
+  main {
+    .story-detail-container {
+      .story-cover-image {
+        height: 35vh !important;
+      }
+    }
+  }
+}
+
+// mobile styles
+@media (min-width: 576px) {
+  main {
+    .story-detail-container {
+      padding-inline: 4rem;
+    }
+  }
+}
+// Tablet styles
+@media (min-width: 768px) {
+  main {
+    .story-detail-container {
+      flex-direction: row-reverse;
+      height: 90vh;
+      width: 85%;
+      margin-inline: auto;
+      padding-inline: unset;
+      gap: 10%;
+
+      .story-cover-image {
+        width: 60%;
+        height: 100%;
+        max-height: auto;
+
+        img {
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .story-content {
+        width: 50%;
+      }
+    }
+  }
+}

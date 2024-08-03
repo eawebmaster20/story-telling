@@ -1,0 +1,46 @@
+<main class="max-width-wrapper">
+  <!--Story preview modal -->
+  @if(showPreviewMoal === true) {
+  <app-preview-modal (closePreviewModal)="closePreviewModal()" />
+  }
+
+  <section class="story-detail-container">
+    <!-- story cover image container -->
+    <div class="story-cover-image">
+      <img [src]="storyData.selectedStoryMeta.coverImage" alt="story-cover" />
+    </div>
+
+    <!-- story content container -->
+    <div class="story-content">
+      <h1>{{ storyData.storyTitle }}</h1>
+      <p>
+        {{ storyData.selectedStoryMeta.description }}
+      </p>
+
+      <!-- story stats  -->
+      <div class="story-stats">
+        <div class="read-by">
+          <p>Read by</p>
+          <h3>{{ storyData.selectedStoryMeta.stats.readBy }}</h3>
+        </div>
+
+        <div class="ratings">
+          <p>Ratings</p>
+          <h3>{{ storyData.selectedStoryMeta.stats.rating }}</h3>
+        </div>
+      </div>
+      <!-- story stats ends -->
+
+      <!-- story actions  -->
+      <div class="story-ctas">
+        <button class="btn-secondary" (click)="showPreviewModal()">Preview</button>
+        <button class="btn-primary"
+        routerLink="/loading-spinner"
+        >
+          Start Story
+        </button>
+      </div>
+    </div>
+    <!-- story content container ends -->
+  </section>
+</main>
