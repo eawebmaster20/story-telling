@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../../services/dataService/data.service';
 
 @Component({
   selector: 'app-mini-map',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrl: './mini-map.component.scss'
 })
 export class MiniMapComponent {
-  constructor(private router: Router){}
+  constructor(private router: Router,public data:DataService){}
 
   mainmenu(){
     this.router.navigate(['/']);

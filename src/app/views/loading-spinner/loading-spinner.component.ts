@@ -26,6 +26,7 @@ export class LoadingSpinnerComponent {
           JSON.stringify(this.dataService.selectedStory)
         );
         setTimeout(() => {
+          console.log(this.dataService.selectedStory)
           this.router.navigate(['/story-scene']);
         }, 4000);
       });

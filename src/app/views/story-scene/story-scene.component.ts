@@ -15,9 +15,12 @@ export class StorySceneComponent {
   }
   ngAfterViewInit() {
     // display scene
-    this.displayScene(
-      this.data.selectedStory[this.data.storyTitle].scenes['initialScene']
-    );
+    setTimeout(()=>{
+      this.displayScene(
+        this.data.selectedStory[this.data.storyTitle].scenes['initialScene']
+      );
+
+    },80)
   }
   ngOnInit(): void {
     // if audio is enabled then auto play when it ends
@@ -100,7 +103,7 @@ export class StorySceneComponent {
     const TextPlugin = (window as any).TextPlugin;
     gsap.registerPlugin(TextPlugin);
     gsap.to(this.storyText.nativeElement, {
-      duration: text.length * 0.04,
+      duration: text.length * 0.01,
       text: text,
       ease: 'none',
     });
@@ -114,6 +117,10 @@ export class StorySceneComponent {
   // function to display story scene
   displayScene(scene: any) {
     // plays audio
+    this.texts = []
+    // this.storyText.nativeElement.textContent = ''
+    // document.getElementById('storyTitle')!.innerText = ''
+    // document.getElementById('storySelfText')!.innerText = 
     if (!this.ismuted) {
       this.audio.play();
     }

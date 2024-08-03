@@ -14,10 +14,10 @@
             </span>
         </div>
         <div class="choices">
-            @for (choice of [1,2,3,1,2,3]; track $index) {
+            @for (choice of data.selectedChoices; track $index) {
                 <div class="flex-it choice">
-                    <span class="choice-index">{{choice}}</span>
-                    <span class="choice-text">roundtable Scene</span>
+                    <span class="choice-index">{{$index + 1}}</span>
+                    <span class="choice-text">{{choice}}</span>
                 </div>
             }
         </div>
