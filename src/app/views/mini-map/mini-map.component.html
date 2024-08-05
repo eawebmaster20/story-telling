@@ -1,0 +1,36 @@
+<div class="container-wrapper">
+    <div class="mini-map">
+        <div class="txt">
+            <span >Choice Map</span>
+        </div>
+        <div class="terminal-point">
+            <span></span>
+            <span class="start">
+                <div class="pointer">
+                    <span class="ball"></span>
+                    <span class="leg"></span>
+                </div>
+                Start
+            </span>
+        </div>
+        <div class="choices">
+            @for (choice of data.selectedChoices; track $index) {
+                <div class="flex-it choice">
+                    <span class="choice-index">{{$index + 1}}</span>
+                    <span class="choice-text">{{choice}}</span>
+                </div>
+            }
+        </div>
+        <div class="terminal-point">
+            <span class="end">
+                End
+                <div class="pointer">
+                    <span class="leg"></span>
+                    <span class="ball"></span>
+                </div>
+            </span>
+            
+        </div>
+    </div>
+    <button (click)="mainmenu()">Main Menu</button>
+</div>

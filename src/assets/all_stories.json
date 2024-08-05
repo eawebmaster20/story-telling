@@ -1,0 +1,25 @@
+{
+    "Green Knight Story":{
+        "storyFileName":"green_knight",
+        "initialScene": "roundtableScene",
+        "description": "After defeating the dragon, Sir PK enters the tower’s depths and discovers Princess Harriet bound in heavy chains. Her eyes light up with hope as she sees her rescuer. With a swift, determined effort, PK begins to free her, ready to bring her back to safety",
+        "coverImage": "assets/image/green-knight.png",
+        "introVideo": "assets/storyIntro/IntroVideo.mp4",
+        "stats": {
+        "readBy": 806,
+        "rating": 9.8
+        }
+    },
+    "Journey To Amalitech":{
+        "storyFileName":"journey_to_amalitech",
+        "initialScene": "theofferScene",
+        "description": "Atongo, a talented young man, receives an exciting job offer from Amalitech, a leading tech company. Filled with anticipation and hope, he prepares to embark on a new chapter in his life, eager to seize the opportunity and prove his skills in the tech world.",
+        "coverImage": "assets/image/JourneyCover.jpg",
+        "introVideo": "assets/image/green-knight.png",
+        "stats": {
+        "readBy": 300,
+        "rating": 7.3
+        }
+    }
+   
+}

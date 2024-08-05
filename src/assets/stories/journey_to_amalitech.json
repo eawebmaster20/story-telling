@@ -1,0 +1,214 @@
+{
+  "Journey To Amalitech": {
+    "scenes": {
+      "initialScene": {
+        "id": "initialScene",
+        "title": "The Offer",
+        "image": "../assets/amalitechImages/acceptoffer.jpg",
+        "description": "Atongo, a talented young man, receives an exciting job offer from Amalitech, a leading tech company. Filled with anticipation and hope, he prepares to embark on a new chapter in his life, eager to seize the opportunity and prove his skills in the tech world.",
+        "decisions": [],
+        "nextScene": "dressingScene"
+      },
+
+      "dressingScene": {
+        "id": "dressingScene",
+        "image": "../assets/amalitechImages/dressingscene.jpg",
+        "title": "Preparing for the Journey",
+        "description": "Atongo dresses smartly, carefully selecting his outfit as he prepares for his journey to Amalitech. The anticipation of his new job fills him with excitement and nerves. With a final look in the mirror, he grabs his suitcase, ready to embark on this new chapter.",
+        "decisions": [],
+        "nextScene": "taxitrotroScene"
+      },
+      "taxitrotroScene": {
+        "id": "taxitrotroScene",
+        "title": "Heading to the Bus Station",
+        "image": "../assets/amalitechImages/taxiortrotroscene.jpg",
+        "description": "Atongo stands at the car station, deciding between a trotro and a taxi to get to the bus station. The taxi offers speed and comfort, while the trotro is more economical. Considering his luggage and the importance of reaching on time, he thinks carefully",
+        "decisions": [
+          {
+            "choice": "A",
+            "text": "Pick A Taxi",
+            "nextScene": "busstationScene"
+          },
+          {
+            "choice": "B",
+            "text": "Pick a Trotro",
+            "nextScene": "trotrodelay1Scene"
+          }
+        ]
+      },
+      "trotrodelay1Scene": {
+        "id": "trotrodelay1Scene",
+        "title": "The Trotro's Delay",
+        "image": "../assets/amalitechImages/trotrodelay1.jpg",
+        "description": "Atongo chooses the trotro, but it waits for more passengers before departing, causing a delay. He checks his watch anxiously, aware of the ticking time. The delay adds tension to his journey, but he remains hopeful he'll reach the bus station in time to catch the STC bus to Amalitech.",
+        "decisions": [],
+        "nextScene": "trotrodelay2Scene"
+      },
+      "trotrodelay2Scene": {
+        "id": "trotrodelay2Scene",
+        "title": "Passengers on slowy Boarding",
+        "image": "../assets/amalitechImages/trotrodelay2.jpg",
+        "description": "A few passengers begin to climb aboard the trotro, slowly filling the seats. Atongo watches with growing impatience, eager for the journey to the bus station to begin. Each new passenger brings him one step closer to departure, and he remains hopeful that he'll reach the bus station on time.",
+        "decisions": [],
+        "nextScene": "trotrodelay3Scene"
+      },
+      "trotrodelay3Scene": {
+        "id": "trotrodelay3Scene",
+        "title": "On the Move",
+        "image": "../assets/amalitechImages/trotrodelay3.jpg",
+        "description": "The trotro finally moves, setting off toward the bus station. Atongo feels a sense of relief as the journey begins. Watching the cityscape pass by, he remains focused on reaching the bus station in time to catch the STC bus, his thoughts filled with anticipation for his new adventure at Amalitech.",
+        "decisions": [],
+        "nextScene": "busstationScene"
+      },
+
+      "busstationScene": {
+        "id": "busstationScene",
+        "title": "Picking STC or VIP For The Journey",
+        "image": "../assets/amalitechImages/busstationscene.jpg",
+        "description": "Atongo arrives at the bus station, faced with a choice between the STC bus and the VIP bus. Weighing his options, he considers comfort, speed, and cost. The decision is crucial, as it marks the first step in his journey to Amalitech and the start of his new adventure.",
+        "decisions": [
+          {
+            "choice": "A",
+            "text": "Pick STC Bus",
+            "nextScene": "pickingStcScene"
+          },
+          {
+            "choice": "B",
+            "text": "Pick VIP Bus",
+            "nextScene": "pickingVipScene"
+          }
+        ]
+      },
+      "pickingStcScene": {
+        "id": "pickingStcScene",
+        "title": "Choosing the STC Bus",
+        "image": "../assets/amalitechImages/pickingstc.jpg",
+        "description": "Atongo decides on the STC bus for his journey to Amalitech. Boarding with his suitcase in hand, he finds a comfortable seat and settles in. As the bus pull away, he looks out the window, filled with excitement and anticipation for the new opportunities that await him.",
+        "decisions": [],
+        "nextScene": "bustostopScene"
+      },
+      "pickingVipScene": {
+        "id": "pickingVipScene",
+        "title": "Opting for the VIP Bus",
+        "image": "../assets/amalitechImages/pickingvip.jpg",
+        "description": "Atongo, deciding on comfort for his long journey, chooses the VIP bus over the STC bus. He boards with ease, finds a plush seat, and settles in. The smooth ride and amenities promise a pleasant trip, allowing him to relax and prepare for his new role at Amalitech",
+        "decisions": [],
+        "nextScene": "vip1Scene"
+      },
+      "vip1Scene": {
+        "id": "vip1Scene",
+        "title": "The Choice to Relax",
+        "image": "../assets/amalitechImages/vip1scene.jpg",
+        "description": "As the VIP bus sets off, Atongo contemplates how to spend his time during the journey. He considers listening to music to pass the time or catching up on sleep to arrive refreshed. Weighing his options, he decides to let the rhythmic hum of the bus guide his choice.",
+        "decisions": [
+          {
+            "choice": "A",
+            "text": "Listen To Music",
+            "nextScene": "bustostopScene"
+          },
+          {
+            "choice": "B",
+            "text": "Take A Nap",
+            "nextScene": "bustostopScene"
+          }
+        ]
+      },
+      "bustostopScene": {
+        "id": "bustostopScene",
+        "title": " Unexpected Stop",
+        "image": "../assets/amalitechImages/bustostop.jpg",
+        "description": "The VIP bus suddenly halts at a rest stop, allowing passengers to buy food or use the restroom.Atongo considers whether to buy food at the rest stop or stay on the bus. Weighing his hunger against the convenience of not leaving his seat",
+        "decisions": [
+          {
+            "choice": "A",
+            "text": "Go Buy a Snack",
+            "nextScene": "snackScene"
+          },
+          {
+            "choice": "B",
+            "text": "Remain on Seat",
+            "nextScene": "inseatScene"
+          }
+        ]
+      },
+      "snackScene": {
+        "id": "snackScene",
+        "title": "Quick Snack",
+        "image": "../assets/amalitechImages/snackscene.jpg",
+        "description": "Atongo grabs a quick snack from the rest stop, enjoying a bite before heading back to the bus. With his hunger satisfied, he returns to his seat, ready to continue the journey to Amalitech, feeling refreshed and focused for the adventure ahead.",
+        "decisions": [],
+        "nextScene": "busmovesScene"
+      },
+      "inseatScene": {
+        "id": "inseatScene",
+        "title": "Staying Put",
+        "image": "../assets/amalitechImages/inseat.jpg",
+        "description": "Atongo decides not to get a snack at the rest stop, choosing to remain comfortably in his seat. He stretches and relaxes as the bus continues its journey to Amalitech, focusing on the upcoming opportunity and preparing mentally for the new chapter in his life",
+        "decisions": [],
+        "nextScene": "busmovesScene"
+      },
+      "busmovesScene": {
+        "id": "busmovesScene",
+        "title": " Onward to Amalitech Kumasi",
+        "image": "../assets/amalitechImages/butmoves.jpg",
+        "description": "After the rest stop, the VIP bus resumes its journey toward Amalitech. Atongo settles back into his seat, feeling refreshed and ready. As the landscape unfolds outside, he looks forward to reaching his destination and starting his new adventure with renewed anticipation.",
+        "decisions": [],
+        "nextScene": "arrivalScene"
+      },
+
+      "arrivalScene": {
+        "id": "arrivalScene",
+        "title": " Choosing the Final Leg",
+        "image": "../assets/amalitechImages/busstationscene.jpg",
+        "description": "Upon arriving at the bus station, Atongo faces a final decision: take a taxi for a direct, comfortable ride to Amalitech or opt for a trotro for a more economical choice. Weighing convenience against cost, he makes his choice and prepares for the last leg of his journey.",
+        "decisions": [
+          {
+            "choice": "A",
+            "text": "Pick a Trotro",
+            "nextScene": "end1Scene"
+          },
+          {
+            "choice": "B",
+            "text": "Pick A Taxi",
+            "nextScene": "end2Scene"
+          }
+        ]
+      },
+
+      "end1Scene": {
+        "id": "end1Scene",
+        "title": "Arrival at Amalitech Kumasi",
+        "image": "../assets/amalitechImages/amalitech.jpg",
+        "description": "Atongo arrives at Amalitech via the trotro, stepping out into the bustling tech city. Though the ride was less luxurious, he’s excited and ready to start his new job. With the city’s vibrant energy around him, Atongo heads towards his new workplace, eager for the opportunities ahead.",
+        "decisions": [],
+        "nextScene": "end"
+      },
+      "end2Scene": {
+        "id": "end2Scene",
+        "title": "Arrival at Amalitech Kumasi",
+        "image": "../assets/amalitechImages/amalitech.jpg",
+        "description": "Atongo arrives at Amalitech in a taxi, enjoying a comfortable and smooth ride. Stepping out into the city’s tech hub, he feels a sense of accomplishment and readiness. With the sleek offices of Amalitech in view, he heads toward his new workplace, eager to begin his exciting new chapter.",
+        "decisions": [],
+        "nextScene": "end"
+      },
+      "end": {
+        "id": "end",
+        "title": "Journey Concludes",
+        "image": "../assets/amalitechImages/journeyconclude.jpg",
+        "description": "Atongo's journey ends as he arrives at Amalitech, ready to begin his new role. The challenges of the trip have been met with determination, and now he stands at the threshold of new opportunities. With excitement and optimism, he steps into his future at Amalitech, prepared for the adventure ahead.",
+        "decisions": [
+          {
+            "choice": "A",
+            "text": "Journey Map",
+            "nextScene": "menu"
+          },
+          {
+            "choice": "B",
+            "text": "Replay",
+            "nextScene": "initialScene"
+          }
+        ]
+      }
+    }
+  }
+}
