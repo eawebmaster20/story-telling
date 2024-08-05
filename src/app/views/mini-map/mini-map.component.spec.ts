@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MiniMapComponent } from './mini-map.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('MiniMapComponent', () => {
   let component: MiniMapComponent;
@@ -8,7 +9,7 @@ describe('MiniMapComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MiniMapComponent]
+      imports: [MiniMapComponent, HttpClientTestingModule]
     })
     .compileComponents();
     
@@ -17,7 +18,8 @@ describe('MiniMapComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  test('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

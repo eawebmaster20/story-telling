@@ -34,7 +34,7 @@ export class DataService {
   constructor(public api: ApiService, private router:Router) {}
   getAllStories() {
     this.api.getStories().subscribe((res) => {
-      console.log(res);
+      // console.log(res);
       this.stories = res;
       localStorage.setItem('stories',JSON.stringify(this.stories))
     });
@@ -46,7 +46,7 @@ export class DataService {
     this.selectedStoryMeta = this.stories[selectedMeta];
     this.storyTitle = selectedMeta;
     localStorage.setItem('storyTitle',JSON.stringify(this.storyTitle));
-    console.log(selectedMeta,this.selectedStoryMeta);
+    // console.log(selectedMeta,this.selectedStoryMeta);
     this.router.navigate(['/story-detail'])
   }
   

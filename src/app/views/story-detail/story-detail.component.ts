@@ -12,13 +12,13 @@ import { PreviewModalComponent } from '../preview-modal/preview-modal.component'
 export class StoryDetailComponent {
   // data will be fetched dynamically
   constructor(public storyData:DataService){
-    console.log("story: ",this.storyData.selectedStoryMeta)
+    // console.log("story: ",this.storyData.selectedStoryMeta)
   }
 
   showPreviewMoal = false;
 
   showPreviewModal() {
-    console.log('show preview modal');
+    // console.log('show preview modal');
     this.showPreviewMoal = true;
   }
 

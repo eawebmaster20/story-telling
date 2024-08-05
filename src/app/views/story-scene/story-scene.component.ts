@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrl: './story-scene.component.scss',
 })
 export class StorySceneComponent {
+  printTextInterval:any
   constructor(private data: DataService, private router: Router) {
     // initialize audio
     this.audio = new Audio('../../../assets/soundTrack/knightSoundTrack.mp3');
@@ -68,7 +69,7 @@ export class StorySceneComponent {
   @ViewChild('nextbtn') next!: ElementRef;
   @ViewChild('storyText') storyText!: ElementRef;
   //  audio
-  audio: any;
+  audio: HTMLAudioElement;
   // story variables
   sceneId: any;
   sceneImage: string = '';
@@ -94,19 +95,27 @@ export class StorySceneComponent {
   showNextText() {
     this.currentIndex = (this.currentIndex + 1) % this.texts.length;
     const newText = this.texts[this.currentIndex];
+    clearInterval(this.printTextInterval)
     this.animateTyping(newText);
   }
   animateTyping(text: string) {
     // cleans current text
     this.storyText.nativeElement.textContent = '';
-    const gsap = (window as any).gsap;
-    const TextPlugin = (window as any).TextPlugin;
-    gsap.registerPlugin(TextPlugin);
-    gsap.to(this.storyText.nativeElement, {
-      duration: text.length * 0.01,
-      text: text,
-      ease: 'none',
-    });
+    // const gsap = (window as any).gsap;
+    // const TextPlugin = (window as any).TextPlugin;
+    // gsap.registerPlugin(TextPlugin);
+    // gsap.to(this.storyText.nativeElement, {
+    //   duration: text.length * 0.01,
+    //   text: text,
+    //   ease: 'none',
+    // });
+    let data = text.split('')
+    let counter = 0
+    this.printTextInterval = setInterval(() => {
+    data[counter] ?this.storyText.nativeElement.textContent += data[counter]: this.storyText.nativeElement.textContent +" "
+      counter ++
+      counter === 0 ? clearInterval(this.printTextInterval):''
+    }, 50);
   }
   // story scene fetcher
   getSceneById(sceneID: any) {
